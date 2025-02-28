@@ -1,0 +1,65 @@
+[gd_scene load_steps=2 format=3 uid="uid://crlwpnyywbl3w"]
+
+[ext_resource type="Script" path="res://camera_manager.gd" id="1_w4arm"]
+
+[node name="MultiViewportLayout" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w4arm")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="TopViewContainer" type="SubViewportContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="TopViewport" type="SubViewport" parent="GridContainer/TopViewContainer"]
+handle_input_locally = false
+size = Vector2i(958, 538)
+render_target_update_mode = 4
+
+[node name="LeftViewContainer" type="SubViewportContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="LeftViewport" type="SubViewport" parent="GridContainer/LeftViewContainer"]
+handle_input_locally = false
+size = Vector2i(958, 538)
+render_target_update_mode = 4
+
+[node name="RightViewContainer" type="SubViewportContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="RightViewport" type="SubViewport" parent="GridContainer/RightViewContainer"]
+handle_input_locally = false
+size = Vector2i(958, 538)
+render_target_update_mode = 4
+
+[node name="BackViewContainer" type="SubViewportContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="BackViewport" type="SubViewport" parent="GridContainer/BackViewContainer"]
+handle_input_locally = false
+size = Vector2i(958, 538)
+render_target_update_mode = 4

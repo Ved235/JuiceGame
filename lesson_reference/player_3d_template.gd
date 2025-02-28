@@ -81,11 +81,10 @@ func _physics_process(delta: float) -> void:
 
 	# Calculate movement input and align it to the camera's direction.
 	var raw_input := Input.get_vector("move_left", "move_right", "move_up", "move_down", 0.4)
-	# Should be projected onto the ground plane.
-	var forward := _camera.global_basis.z
-	var right := _camera.global_basis.x
-	var move_direction := forward * raw_input.y + right * raw_input.x
-	move_direction.y = 0.0
+	# Map the 2D input to 3D world directions
+	var move_direction := Vector3.ZERO
+	move_direction.x = raw_input.x  # Left/right
+	move_direction.z = raw_input.y  # Forward/backward
 	move_direction = move_direction.normalized()
 
 	# To not orient the character too abruptly, we filter movement inputs we
