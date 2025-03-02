@@ -6,10 +6,11 @@ extends Control
 @export var left_camera: Camera3D
 @export var right_camera: Camera3D
 
-# References to viewports
-@onready var top_viewport: SubViewport = $GridContainer/TopViewContainer/TopViewport
-@onready var left_viewport: SubViewport = $GridContainer/LeftViewContainer/LeftViewport
-@onready var right_viewport: SubViewport = $GridContainer/RightViewContainer/RightViewport
+
+# References to viewports - updated paths to match new layout
+@onready var left_viewport: SubViewport = $VBoxContainer/TopRowContainer/LeftViewContainer/LeftViewport
+@onready var right_viewport: SubViewport = $VBoxContainer/TopRowContainer/RightViewContainer/RightViewport
+@onready var top_viewport: SubViewport = $VBoxContainer/TopViewContainer/TopViewport
 
 func _ready():
 	var target = get_node(target_path) if target_path else null

@@ -9,13 +9,6 @@
 
 [node name="Level" parent="." instance=ExtResource("1_h8bc2")]
 
-[node name="MultiViewportLayout" parent="." node_paths=PackedStringArray("top_camera", "left_camera", "right_camera", "back_camera") instance=ExtResource("2_0j78r")]
-target_path = NodePath("../Player3DTemplate")
-top_camera = NodePath("../Camera3D")
-left_camera = NodePath("../Camera3D2")
-right_camera = NodePath("../Camera3D4")
-back_camera = NodePath("../Camera3D3")
-
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1.26597, 9.05423, -33)
 projection = 1
@@ -26,12 +19,14 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.5869
 script = ExtResource("3_i7rsh")
 
 [node name="Camera3D3" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2912, 2.5525, -31.6233)
-script = ExtResource("3_i7rsh")
-
-[node name="Camera3D4" type="Camera3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.22565, 3.90553, -32.8976)
+transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, -0.450349, 2.5525, -31.6233)
 script = ExtResource("3_i7rsh")
 
 [node name="Player3DTemplate" parent="." instance=ExtResource("3_bnm4t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.02097, 4.00049, -33.938)
+
+[node name="MultiViewportLayout" parent="." node_paths=PackedStringArray("top_camera", "left_camera", "right_camera") instance=ExtResource("2_0j78r")]
+target_path = NodePath("../Player3DTemplate")
+top_camera = NodePath("../Camera3D")
+left_camera = NodePath("../Camera3D2")
+right_camera = NodePath("../Camera3D3")
