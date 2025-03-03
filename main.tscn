@@ -15,11 +15,12 @@ projection = 1
 script = ExtResource("3_i7rsh")
 
 [node name="Camera3D2" type="Camera3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.58693, 4.37692, -33)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.58693, 4.16211, -33)
+projection = 1
 script = ExtResource("3_i7rsh")
 
 [node name="Camera3D3" type="Camera3D" parent="."]
-transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, -0.450349, 2.5525, -31.6233)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.450349, 2.5525, -31.6233)
 script = ExtResource("3_i7rsh")
 
 [node name="Player3DTemplate" parent="." instance=ExtResource("3_bnm4t")]

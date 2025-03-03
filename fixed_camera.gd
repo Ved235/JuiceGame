@@ -1,8 +1,9 @@
 extends Camera3D
 
 @export var target_path: NodePath
-@export var offset := Vector3(5, 5, 10)  # x = side offset, y = height, z = distance
+@export var offset := Vector3(10, 5, 10)  # x = side offset, y = height, z = distance
 @export var view_type := "top"  # top, left, right, front
+@export var ortho_size := 7  # Controls the zoom level for orthographic cameras
 
 var target: Node3D
 
@@ -17,6 +18,8 @@ func configure_camera(new_view_type: String, new_target: Node3D):
 	print("Configuring camera: ", new_view_type)
 	view_type = new_view_type
 	target = new_target
+	projection = Camera3D.PROJECTION_ORTHOGONAL
+	size = ortho_size  # This controls how much is visible
 	print("Camera configured with view type: ", view_type, " Target set: ", target != null)
 
 func _process(_delta):

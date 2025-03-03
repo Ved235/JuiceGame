@@ -31,7 +31,7 @@ stretch = true
 
 [node name="LeftViewport" type="SubViewport" parent="VBoxContainer/TopRowContainer/LeftViewContainer"]
 handle_input_locally = false
-size = Vector2i(2, 2)
+size = Vector2i(958, 538)
 render_target_update_mode = 4
 
 [node name="RightViewContainer" type="SubViewportContainer" parent="VBoxContainer/TopRowContainer"]
@@ -42,7 +42,7 @@ stretch = true
 
 [node name="RightViewport" type="SubViewport" parent="VBoxContainer/TopRowContainer/RightViewContainer"]
 handle_input_locally = false
-size = Vector2i(2, 2)
+size = Vector2i(958, 538)
 render_target_update_mode = 4
 
 [node name="TopViewContainer" type="SubViewportContainer" parent="VBoxContainer"]
@@ -54,5 +54,5 @@ stretch = true
 
 [node name="TopViewport" type="SubViewport" parent="VBoxContainer/TopViewContainer"]
 handle_input_locally = false
-size = Vector2i(2, 300)
+size = Vector2i(1920, 538)
 render_target_update_mode = 4
