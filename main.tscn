@@ -1,26 +1,27 @@
-[gd_scene load_steps=5 format=3 uid="uid://p7emfeoerm75"]
+[gd_scene load_steps=6 format=3 uid="uid://p7emfeoerm75"]
 
 [ext_resource type="PackedScene" uid="uid://cnedxfn2pxh2t" path="res://level/level.tscn" id="1_h8bc2"]
 [ext_resource type="PackedScene" uid="uid://crlwpnyywbl3w" path="res://multi_viewport_layout.tscn" id="2_0j78r"]
 [ext_resource type="PackedScene" uid="uid://da0eecfpah1ss" path="res://lesson_reference/player.tscn" id="3_bnm4t"]
 [ext_resource type="Script" path="res://fixed_camera.gd" id="3_i7rsh"]
+[ext_resource type="PackedScene" uid="uid://bxg6oejpaitdt" path="res://level/interactable/flag/flag_reached_screen.tscn" id="5_54obu"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="Level" parent="." instance=ExtResource("1_h8bc2")]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1.26597, 9.05423, -33)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 2, 9.054, -33)
 projection = 1
 script = ExtResource("3_i7rsh")
 
 [node name="Camera3D2" type="Camera3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.58693, 4.16211, -33)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 1, -33)
 projection = 1
 script = ExtResource("3_i7rsh")
 
 [node name="Camera3D3" type="Camera3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.450349, 2.5525, -31.6233)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1, -33)
 script = ExtResource("3_i7rsh")
 
 [node name="Player3DTemplate" parent="." instance=ExtResource("3_bnm4t")]
@@ -31,3 +32,5 @@ target_path = NodePath("../Player3DTemplate")
 top_camera = NodePath("../Camera3D")
 left_camera = NodePath("../Camera3D2")
 right_camera = NodePath("../Camera3D3")
+
+[node name="FlagReachedScreen" parent="." instance=ExtResource("5_54obu")]

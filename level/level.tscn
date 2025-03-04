@@ -86,7 +86,6 @@ environment = SubResource("Environment_5pwhg")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.327016, 0.941731, -0.0787648, 0.688764, 0.294578, 0.662441, 0.647044, 0.162378, -0.744962, -47.2295, 26.8832, -28.0205)
 light_energy = 0.53
-shadow_enabled = true
 directional_shadow_max_distance = 40.0
 
 [node name="KillPlane" parent="." instance=ExtResource("3_1g472")]
